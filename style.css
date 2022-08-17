@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%; /* 1rem = 10px */
+    
+    --Almost-White: hsl(0, 0%, 98%);
+    --Medium-Gray: hsl(0, 0%, 41%);
+    --Almost-Black: hsl(0, 0%, 8%);
+}
+
+body {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 1.8rem;
+
+    background-color: var(--Almost-White);
+}
+
+li {
+    list-style: none;
+}
+
+/*=== HEADER & NAVIGATION ===*/
+
+header {
+    max-width: 100vw;
+    padding: 1.5rem;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 6rem;
+
+    position: relative;
+}
+
+header .showMenu {
+    display: none;
+}
+
+header .navigation {
+    display: flex;
+}
+
+header .navigation li:nth-child(3), header .navigation li:nth-child(4) {
+    color: var(--Medium-Gray);
+}
+
+header .navigation li:nth-child(3):hover, header .navigation li:nth-child(4):hover {
+    color: var(--Almost-Black);
+    cursor: pointer;
+}
+
+header .navigation .nav {
+    display: flex;
+    gap: 2rem;
+}
+
+header .navigation .buttons {
+    position: absolute;
+    top: 2%;
+    right: 1%;
+}
+
+header .navigation .buttons #buttonLogin {
+    padding: 1rem;
+    background-color: var(--Almost-White);
+    border: none;
+
+    color: var(--Medium-Gray);
+}
+
+header .navigation .buttons #buttonLogin:hover {
+    color: var(--Almost-Black);
+    
+    cursor: pointer;
+}
+
+header .navigation .buttons #buttonRegister {
+    padding: 1rem;
+    background-color: var(--Almost-White);
+    border: 1px solid var(--Medium-Gray);
+    border-radius: 1rem;
+
+    color: var(--Medium-Gray);
+}
+
+header .navigation .buttons #buttonRegister:hover {
+    border: 1px solid var(--Almost-Black);
+    color: var(--Almost-Black);
+
+    cursor: pointer;
+}
+
+/*=== FEATURES ===*/
+
+header  .navigation .nav .features {
+    position: relative;
+}
+
+header  .navigation .nav .features p {
+    color: var(--Medium-Gray);
+}
+
+header  .navigation .nav .features p:hover {
+    color: var(--Almost-Black);
+
+    cursor: pointer;
+}
+
+header  .navigation .nav .features img {
+    position: absolute;
+    top: 3.5%;
+    left: 88%;
+
+    width: 1rem;
+    
+    border: none;
+    background-color: var(--Almost-White);
+    cursor: pointer;
+
+    transition: 0.5s;
+}
+
+header  .navigation .nav .features .navFeatures {
+    margin-top: 1rem;
+    margin-left: -5rem;
+    height: 15rem;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    box-shadow: 5px 10px 10px hsla(0, 0%, 8%, 0.5);
+    border-radius: 1rem;
+
+    opacity: 0;
+    transition: 0.5s;
+}
+
+header  .navigation .nav .features .navFeatures.navFeaturesShow {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+header  .navigation .nav .features .navFeatures li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header  .navigation .nav .features .navFeatures li svg {
+    width: 2rem;
+}
+
+/*=== COMPANY ===*/
+header .navigation .nav .company {
+    position: relative;
+}
+
+header  .navigation .nav .company p, header  .navigation .nav .company li {
+    color: var(--Medium-Gray);
+}
+
+header  .navigation .nav .company p:hover, header  .navigation .nav .company li:hover {
+    color: var(--Almost-Black);
+
+    cursor: pointer;
+}
+
+header  .navigation .nav .company img {
+    position: absolute;
+    top: 3.5%;
+    left: 73%;
+
+    width: 1rem;
+    
+    border: none;
+    background-color: var(--Almost-White);
+    cursor: pointer;
+
+    transition: 0.5s;
+}
+
+header  .navigation .nav .company .navCompany {
+    margin-top: 1rem;
+    height: 15rem;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    box-shadow: 5px 10px 10px hsla(0, 0%, 8%, 0.5);
+    border-radius: 1rem;
+
+    opacity: 0;
+    transition: 0.5s;
+}
+
+header  .navigation .nav .company .navCompany.navCompanyShow {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+header  .navigation .nav .company .navCompany li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/*=== SECTION ===*/
+section {
+    max-width: 90rem;
+    margin: 0 auto;
+    padding-inline: 5rem;
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 'A B';
+    gap: 10rem;
+}
+
+section .col-A {
+    grid-area: A;
+}
+
+section .col-B {
+    grid-area: B;
+}
+
+section .col-A h1 {
+    font-weight: 700;
+    font-size: 5.3rem;
+}
+
+section .col-A p {
+    margin-top: 6rem;
+    color: var(--Medium-Gray);
+    text-align: justify;
+}
+
+section .col-A button {
+    display: block;
+    margin-top: 6rem;
+    padding: 1rem;
+
+    background-color: var(--Almost-Black);
+    color: var(--Almost-White);
+    border: none;
+    font-weight: 700;
+    border-radius: 1rem;
+}
+
+section .col-A button:hover {
+    cursor: pointer;
+    background-color: var(--Almost-White);
+    color: var(--Almost-Black);
+    border: 1px solid var(--Almost-Black);
+}
+
+section .col-A .clients {
+    margin-top: 10rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+section .col-A .clients img {
+    width: 7rem;
+}
+
+section .col-B img {
+    width: 100%;
+}
+
+.attribution { 
+    font-size: 1.1rem; 
+    text-align: center;
+
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.attribution a { 
+    color: var(--Medium-Gray); 
+}
+
+@media (max-width: 912px) {
+    /*=== HEADER & NAVIGATION ===*/
+    header {
+        justify-content: space-between;
+        
+    }
+
+    header .showMenu {
+        display: block;
+
+        background-color: var(--Almost-White);
+        border: none;
+    }
+
+    header .navigation {
+        flex-direction: column;
+        box-shadow: -10px 15px 10px hsla(0, 0%, 8%, 0.5);
+        background-color: var(--Almost-White);
+        padding: 2rem;
+
+        position: absolute;
+        top: 99%;
+        right: 0%;
+
+        z-index: 100;
+        opacity: 0;
+    }
+
+    header .navigation.navigationShow {
+        opacity: 1;
+    }
+
+    header .navigation li.carrers {
+        margin-top: -16rem;
+    }
+
+    header .navigation li.carrers.carrersControlMargin {
+        margin-top: 0;
+    }
+
+    header .navigation .nav {
+        flex-direction: column;
+    }
+
+    header .navigation .buttons {
+        position: initial;
+
+        margin-top: 3rem;
+    }
+
+    header  .navigation .nav .features img {
+        left: 60%;
+    }
+
+    header  .navigation .nav .features .navFeatures {
+        margin-left: 0;
+    }
+
+    header  .navigation .nav .company {
+        margin-top: -16rem;
+    }
+
+    header  .navigation .nav .company.companyControlMargin {
+        margin-top: 0;
+    }
+
+    header  .navigation .nav .company img {
+        left: 60%;
+    }
+
+    /*=== SECTION ===*/
+    section {
+        max-width: 100vw;
+        padding-inline: 0;
+        margin: 0;
+        gap: 0;
+
+        display: flex;
+        flex-direction: column;
+
+        position: relative;
+    }
+
+    section .col-A {
+        padding: 0 2rem;
+    }
+
+    section .col-A h1 {
+        text-align: center;
+        font-size: 4rem;
+        margin-top: 6rem;
+    }
+
+    section .col-A p {
+        text-align: center;
+    }
+
+    section .col-A button {
+        margin: 0 auto;
+        margin-top: 6rem;
+    }
+
+    section .col-A .clients {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5rem;
+    }
+}
